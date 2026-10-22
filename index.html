@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FORME — Objects of Desire</title>
+  <meta name="description" content="FORME, a curated fashion gallery of clothing, watches, footwear and bags.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&family=Hanken+Grotesk:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a href="#" class="brand" id="brand" aria-label="FORME, show all pieces">Forme</a>
+    <nav class="filters" aria-label="Gallery categories">
+      <button class="filter is-active" data-filter="all" aria-pressed="true">All</button>
+      <button class="filter" data-filter="clothing" aria-pressed="false">Clothing</button>
+      <button class="filter" data-filter="watches" aria-pressed="false">Watches</button>
+      <button class="filter" data-filter="footwear" aria-pressed="false">Footwear</button>
+      <button class="filter" data-filter="bags" aria-pressed="false">Bags</button>
+    </nav>
+    <p class="count" aria-live="polite"><span id="count">24</span> pieces</p>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Objects<br>of Desire.</h1>
+      <div class="hero-side">
+        <p>Garments, watches, shoes and bags chosen for line, material and restraint. One season, four disciplines.</p>
+        <p class="issue">Collection No. 07 · Autumn / Winter 2026</p>
+      </div>
+    </section>
+
+    <section class="gallery" id="gallery" aria-label="Fashion gallery"></section>
+  </main>
+
+  <footer class="site-footer">
+    <strong class="brand">Forme</strong>
+    <p>A curated collection of everyday objects.</p>
+    <small>© 2026 Forme. Photography via Unsplash.</small>
+  </footer>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-labelledby="lb-title" hidden>
+    <div class="lb-backdrop" data-close></div>
+    <figure class="lb-figure">
+      <img id="lb-img" alt="">
+      <figcaption>
+        <p class="lb-cat" id="lb-cat"></p>
+        <h2 id="lb-title"></h2>
+        <p id="lb-text"></p>
+        <p class="lb-num" id="lb-num"></p>
+      </figcaption>
+    </figure>
+    <button class="lb-btn lb-close" data-close aria-label="Close image">&times;</button>
+    <button class="lb-btn lb-prev" id="lb-prev" aria-label="Previous image">&#8592;</button>
+    <button class="lb-btn lb-next" id="lb-next" aria-label="Next image">&#8594;</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
